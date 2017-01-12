@@ -308,6 +308,7 @@ def maybe_download_and_extract(dest_dir='/tmp/imagenet'):
     os.makedirs(dest_dir)
   filename = DATA_URL.split('/')[-1]
   filepath = os.path.join(dest_dir, filename)
+  print('Looking for file:', filepath)
   if not os.path.exists(filepath):
 
     def _progress(count, block_size, total_size):
